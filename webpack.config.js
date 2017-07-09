@@ -10,7 +10,7 @@ var BUILD_PATH = path.resolve(ROOT_PATH,"dist");
 
 module.exports = {
     entry: {
-        app:path.resolve(APP_PATH,"app.jsx"),
+        app:path.resolve(APP_PATH,"increaseDemo.jsx"),
     },
     output: {
         path:BUILD_PATH,
@@ -59,7 +59,7 @@ module.exports = {
         extensions: ['.js', '.json', '.scss', '.jsx']
     },
     plugins: [
-        //new HtmlwebpackPlugin({title:"My First React App"}),
+        //new HtmlwebpackPlugin({title:"My First React App"),
         //提取公共文件
         //new webpack.optimize.CommonsChunkPlugin({names:["common"],filename:"[name].js"}),
         //new webpack.DefinePlugin({
