@@ -9,7 +9,8 @@ import { connect, Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 
 import TodoList from './components/TodoList';
-import rootReducer from './reducers/root';
+//import rootReducer from './reducers/root';
+import reducers from './reducers/todoReducers.js';
 import * as actionCreators from './actions/index';
 
 //import 'bootstrap/scss/bootstrap.scss';
@@ -17,11 +18,13 @@ import * as actionCreators from './actions/index';
 // create store with middlewares
 const store = applyMiddleware(
     thunkMiddleware
-)(createStore)(rootReducer);
+)(createStore)(reducers);
 
 // create root component based on component Deskmark
 const App = connect(
-        state => ({ state }),
+        state => ({
+            todos:state.todos,
+        }),
         dispatch => ({
         actions: bindActionCreators(actionCreators, dispatch),
     })

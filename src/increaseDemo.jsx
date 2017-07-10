@@ -28,7 +28,8 @@ class Counter extends Component {
 //校验
 Counter.propTypes = {
   value: PropTypes.number.isRequired,
-  actions: PropTypes.object.isRequired,
+  //actions: PropTypes.object.isRequired,
+  actions: PropTypes.shape({increaseAction: PropTypes.func.isRequired}).isRequired
 }
 
 // Action

@@ -10,7 +10,7 @@ var BUILD_PATH = path.resolve(ROOT_PATH,"dist");
 
 module.exports = {
     entry: {
-        app:path.resolve(APP_PATH,"increaseDemo.jsx"),
+        app:path.resolve(APP_PATH,"app.jsx"),
     },
     output: {
         path:BUILD_PATH,
